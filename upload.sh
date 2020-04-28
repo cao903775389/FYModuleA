@@ -10,8 +10,8 @@ if [ "$ConflicCount" -gt 0 ] ; then
    exit 1
 fi
 
-Repo="DUSpecs"
-RepoList=("DUSpecs" "DUSpecs_test" "DUSpecs_gray")
+Repo="FYModuleSpec"
+RepoList=("FYModuleSpec")
 getRepo() {
     echo -e "\n"
     length=${#RepoList[@]}
