@@ -59,7 +59,7 @@ GrayVersionString=`grep -E 'version.gray.*=' FYModuleA.podspec`
 GrayVersionNumber=`tr -cd 0-9 <<<"$GrayVersionString"`
 NewGrayVersionNumber=$GrayVersionNumber
 
-if [ "$Repo" == "DUSpecs" ]; then
+if [ "$Repo" == "FYModuleSpec" ]; then
   NewDevelopVersionNumber=$(($DevelopVersionNumber + 1))
   NewTestVersionNumber=0
   NewGrayVersionNumber=0

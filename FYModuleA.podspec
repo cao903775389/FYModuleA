@@ -6,7 +6,7 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-# version.develop = 0
+version.develop = 0.0.0
 # version.test = 0
 # version.gray = 0
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FYModuleA"
-  s.version      = "0.0.0"
+  s.version      = "1.0.0"
   s.summary      = "FYModuleA."
 
   # This description is used to generate tags and improve search results.
