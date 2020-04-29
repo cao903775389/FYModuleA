@@ -65,14 +65,6 @@ if [ "$Repo" == "FYModuleSpec" ]; then
   NewGrayVersionNumber=0
 fi
 
-if [ "$Repo" == "DUSpecs_test" ]; then
-  NewTestVersionNumber=$(($TestVersionNumber + 1))
-fi
-
-if [ "$Repo" == "DUSpecs_gray" ]; then
-  NewGrayVersionNumber=$(($GrayVersionNumber + 1))
-fi
-
 DevelopVersionLineNumber=`grep -nE 'version.develop.*=' FYModuleA.podspec | cut -d : -f1`
 sed -i "" "${DevelopVersionLineNumber}s/${DevelopVersionNumber}/${NewDevelopVersionNumber}/g" FYModuleA.podspec
 echo "current develop version is ${DevelopVersionNumber}, new version is ${NewDevelopVersionNumber}, line number is ${DevelopVersionLineNumber}"
