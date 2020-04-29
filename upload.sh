@@ -11,7 +11,7 @@ if [ "$ConflicCount" -gt 0 ] ; then
 fi
 
 Repo="FYModuleSpec"
-RepoList=("FYModuleSpec")
+RepoList=("FYModuleSpec" "FYModuleSpec_test" "FYModuleSpec_gray")
 getRepo() {
     echo -e "\n"
     length=${#RepoList[@]}
@@ -63,6 +63,14 @@ if [ "$Repo" == "FYModuleSpec" ]; then
   NewDevelopVersionNumber=$(($DevelopVersionNumber + 1))
   NewTestVersionNumber=0
   NewGrayVersionNumber=0
+fi
+
+if [ "$Repo" == "FYModuleSpec_test" ]; then
+  NewTestVersionNumber=$(($TestVersionNumber + 1))
+fi
+
+if [ "$Repo" == "FYModuleSpec_gray" ]; then
+  NewGrayVersionNumber=$(($GrayVersionNumber + 1))
 fi
 
 DevelopVersionLineNumber=`grep -nE 'version.develop.*=' FYModuleA.podspec | cut -d : -f1`
