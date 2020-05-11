@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    this is FYModuleA
+                    this is FYModuleA master
                    DESC
 
   s.homepage     = "https://github.com/cao903775389/FYModuleA"
